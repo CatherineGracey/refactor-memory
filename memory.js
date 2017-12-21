@@ -107,154 +107,28 @@ var shuffleLength = shuffleArray.length;
 console.log(shuffleLength);
 
 //Variables to shuffle cards on the game board.
-var shuffle1 = (Math.floor(Math.random() * shuffleLength));
-var cardShuffle1 = shuffleArray[shuffle1];
-console.log(cardShuffle1);
-
-var shuffle2 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle2 === shuffle1) {
-	shuffle2 = (Math.floor(Math.random() * shuffleLength));
+var shuffles = []
+var cardShuffles = []
+for (var i = 0; i < 20; i++) {
+	var shuffle = Math.floor(Math.random() * shuffleLength);	
+	while (shuffles.includes(shuffle)){
+		shuffle = Math.floor(Math.random() * shuffleLength);
+	}
+	shuffles.push(shuffle);
 }
-var cardShuffle2 = shuffleArray[shuffle2];
-console.log(cardShuffle2);
+console.log(shuffles)
 
-var shuffle3 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle3 === shuffle1 || shuffle3 === shuffle2) {
-	shuffle3 = (Math.floor(Math.random() * shuffleLength));
+for (var i = 0; i < shuffleArray.length; i++) {
+	cardShuffles[i] = shuffleArray[shuffles[i]]
 }
-var cardShuffle3 = shuffleArray[shuffle3];
-console.log(cardShuffle3);
-
-var shuffle4 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle4 === shuffle1 || shuffle4 === shuffle2 || shuffle4 === shuffle3) {
-	shuffle4 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle4 = shuffleArray[shuffle4];
-console.log(cardShuffle4);
-
-var shuffle5 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle5 === shuffle1 || shuffle5 === shuffle2 || shuffle5 === shuffle3 || shuffle5 === shuffle4) {
-	shuffle5 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle5 = shuffleArray[shuffle5];
-console.log(cardShuffle5);
-
-var shuffle6 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle6 === shuffle1 || shuffle6 === shuffle2 || shuffle6 === shuffle3 || shuffle6 === shuffle4 || shuffle6 === shuffle5) {
-	shuffle6 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle6 = shuffleArray[shuffle6];
-console.log(cardShuffle6);
-
-var shuffle7 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle7 === shuffle1 || shuffle7 === shuffle2 || shuffle7 === shuffle3 || shuffle7 === shuffle4 || shuffle7 === shuffle5 || shuffle7 === shuffle6) {
-	shuffle7 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle7 = shuffleArray[shuffle7];
-console.log(cardShuffle7);
-
-var shuffle8 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle8 === shuffle1 || shuffle8 === shuffle2 || shuffle8 === shuffle3 || shuffle8 === shuffle4 || shuffle8 === shuffle5 || shuffle8 === shuffle6 || shuffle8 === shuffle7) {
-	shuffle8 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle8 = shuffleArray[shuffle8];
-console.log(cardShuffle8);
-
-var shuffle9 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle9 === shuffle1 || shuffle9 === shuffle2 || shuffle9 === shuffle3 || shuffle9 === shuffle4 || shuffle9 === shuffle5 || shuffle9 === shuffle6 || shuffle9 === shuffle7 || shuffle9 === shuffle8) {
-	shuffle9 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle9 = shuffleArray[shuffle9];
-console.log(cardShuffle9);
-
-var shuffle10 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle10 === shuffle1 || shuffle10 === shuffle2 || shuffle10 === shuffle3 || shuffle10 === shuffle4 || shuffle10 === shuffle5 || shuffle10 === shuffle6 || shuffle10 === shuffle7 || shuffle10 === shuffle8 || shuffle10 === shuffle9) {
-	shuffle10 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle10 = shuffleArray[shuffle10];
-console.log(cardShuffle10);
-
-var shuffle11 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle11 === shuffle1 || shuffle11 === shuffle2 || shuffle11 === shuffle3 || shuffle11 === shuffle4 || shuffle11 === shuffle5 || shuffle11 === shuffle6 || shuffle11 === shuffle7 || shuffle11 === shuffle8 || shuffle11 === shuffle9 || shuffle11 === shuffle10) {
-	shuffle11 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle11 = shuffleArray[shuffle11];
-
-var shuffle12 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle12 === shuffle1 || shuffle12 === shuffle2 || shuffle12 === shuffle3 || shuffle12 === shuffle4 || shuffle12 === shuffle5 || shuffle12 === shuffle6 || shuffle12 === shuffle7 || shuffle12 === shuffle8 || shuffle12 === shuffle9 || shuffle12 === shuffle10 || shuffle12 === shuffle11) {
-	shuffle12 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle12 = shuffleArray[shuffle12];
-
-var shuffle13 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle13 === shuffle1 || shuffle13 === shuffle2 || shuffle13 === shuffle3 || shuffle13 === shuffle4 || shuffle13 === shuffle5 || shuffle13 === shuffle6 || shuffle13 === shuffle7 || shuffle13 === shuffle8 || shuffle13 === shuffle9 || shuffle13 === shuffle10 || shuffle13 === shuffle11 || shuffle13 === shuffle12) {
-	shuffle13 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle13 = shuffleArray[shuffle13];
-
-var shuffle14 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle14 === shuffle1 || shuffle14 === shuffle2 || shuffle14 === shuffle3 || shuffle14 === shuffle4 || shuffle14 === shuffle5 || shuffle14 === shuffle6 || shuffle14 === shuffle7 || shuffle14 === shuffle8 || shuffle14 === shuffle9 || shuffle14 === shuffle10 || shuffle14 === shuffle11 || shuffle14 === shuffle12 || shuffle14 === shuffle13) {
-	shuffle14 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle14 = shuffleArray[shuffle14];
-
-var shuffle15 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle15 === shuffle1 || shuffle15 === shuffle2 || shuffle15 === shuffle3 || shuffle15 === shuffle4 || shuffle15 === shuffle5 || shuffle15 === shuffle6 || shuffle15 === shuffle7 || shuffle15 === shuffle8 || shuffle15 === shuffle9 || shuffle15 === shuffle10 || shuffle15 === shuffle11 || shuffle15 === shuffle12 || shuffle15 === shuffle13 || shuffle15 === shuffle14) {
-	shuffle15 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle15 = shuffleArray[shuffle15];
-
-var shuffle16 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle16 === shuffle1 || shuffle16 === shuffle2 || shuffle16 === shuffle3 || shuffle16 === shuffle4 || shuffle16 === shuffle5 || shuffle16 === shuffle6 || shuffle16 === shuffle7 || shuffle16 === shuffle8 || shuffle16 === shuffle9 || shuffle16 === shuffle10 || shuffle16 === shuffle11 || shuffle16 === shuffle12 || shuffle16 === shuffle13 || shuffle16 === shuffle14 || shuffle16 === shuffle15) {
-	shuffle16 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle16 = shuffleArray[shuffle16];
-
-var shuffle17 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle17 === shuffle1 || shuffle17 === shuffle2 || shuffle17 === shuffle3 || shuffle17 === shuffle4 || shuffle17 === shuffle5 || shuffle17 === shuffle6 || shuffle17 === shuffle7 || shuffle17 === shuffle8 || shuffle17 === shuffle9 || shuffle17 === shuffle10 || shuffle17 === shuffle11 || shuffle17 === shuffle12 || shuffle17 === shuffle13 || shuffle17 === shuffle14 || shuffle17 === shuffle15 || shuffle17 === shuffle16) {
-	shuffle17 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle17 = shuffleArray[shuffle17];
-
-var shuffle18 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle18 === shuffle1 || shuffle18 === shuffle2 || shuffle18 === shuffle3 || shuffle18 === shuffle4 || shuffle18 === shuffle5 || shuffle18 === shuffle6 || shuffle18 === shuffle7 || shuffle18 === shuffle8 || shuffle18 === shuffle9 || shuffle18 === shuffle10 || shuffle18 === shuffle11 || shuffle18 === shuffle12 || shuffle18 === shuffle13 || shuffle18 === shuffle14 || shuffle18 === shuffle15 || shuffle18 === shuffle16 || shuffle18 === shuffle17) {
-	shuffle18 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle18 = shuffleArray[shuffle18];
-
-var shuffle19 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle19 === shuffle1 || shuffle19 === shuffle2 || shuffle19 === shuffle3 || shuffle19 === shuffle4 || shuffle19 === shuffle5 || shuffle19 === shuffle6 || shuffle19 === shuffle7 || shuffle19 === shuffle8 || shuffle19 === shuffle9 || shuffle19 === shuffle10 || shuffle19 === shuffle11 || shuffle19 === shuffle12 || shuffle19 === shuffle13 || shuffle19 === shuffle14 || shuffle19 === shuffle15 || shuffle19 === shuffle16 || shuffle19 === shuffle17 || shuffle19 === shuffle18) {
-	shuffle19 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle19 = shuffleArray[shuffle19];
-
-var shuffle20 = (Math.floor(Math.random() * shuffleLength));
-while (shuffle20 === shuffle1 || shuffle20 === shuffle2 || shuffle20 === shuffle3 || shuffle20 === shuffle4 || shuffle20 === shuffle5 || shuffle20 === shuffle6 || shuffle20 === shuffle7 || shuffle20 === shuffle8 || shuffle20 === shuffle9 || shuffle20 === shuffle10 || shuffle20 === shuffle11 || shuffle20 === shuffle12 || shuffle20 === shuffle13 || shuffle20 === shuffle14 || shuffle20 === shuffle15 || shuffle20 === shuffle16 || shuffle20 === shuffle17 || shuffle20 === shuffle18 || shuffle20 === shuffle19) {
-	shuffle20 = (Math.floor(Math.random() * shuffleLength));
-}
-var cardShuffle20 = shuffleArray[shuffle20];
+console.log(cardShuffles)
 
 //Variables to activate card onclick functions.
-var click1 = 1;
-var click2 = 1;
-var click3 = 1;
-var click4 = 1;
-var click5 = 1;
-var click6 = 1;
-var click7 = 1;
-var click8 = 1;
-var click9 = 1;
-var click10 = 1;
-var click11 = 1;
-var click12 = 1;
-var click13 = 1;
-var click14 = 1;
-var click15 = 1;
-var click16 = 1;
-var click17 = 1;
-var click18 = 1;
-var click19 = 1;
-var click20 = 1;
+
+var clicks = [];
+for (var i = 0; i < 20; i++) {
+	clicks[i] = 1
+}
 
 //Variables to handle card swapping and comparing.
 var puzzle = "plain_card.png";
@@ -268,11 +142,13 @@ var thirdCardPosition = "unknown";
 
 function resetFirst(){
 	firstCard = "unclicked";
-	firstCardPosition = "unknown";}
+	firstCardPosition = "unknown";
+}
 
 function resetSecond(){
 	secondCard = "unclicked";
-	secondCardPosition = "unknown";}
+	secondCardPosition = "unknown";
+}
 
 function resetThird(){
 	firstCard = thirdCard;
@@ -283,169 +159,22 @@ function resetThird(){
 }
 
 function noMatch(){//Resetting click values from previous incorrect guess.
-	if (click1 === 2){
-		click1 = 1;
-		console.log("Card 1 now equals " + click1);
-	}
-	if (click2 === 2){
-		click2 = 1;
-		console.log("Card 2 now equals " + click2);
-	}
-	if (click3 === 2){
-		click3 = 1;
-		console.log("Card 3 now equals " + click3);
-	}
-	if (click4 === 2){
-		click4 = 1;
-		console.log("Card 4 now equals " + click4);
-	}
-	if (click5 === 2){
-		click5 = 1;
-		console.log("Card 5 now equals " + click5);
-	}
-	if (click6 === 2){
-		click6 = 1;
-		console.log("Card 6 now equals " + click6);
-	}
-	if (click7 === 2){
-		click7 = 1;
-		console.log("Card 7 now equals " + click7);
-	}
-	if (click8 === 2){
-		click8 = 1;
-		console.log("Card 8 now equals " + click8);
-	}
-	if (click9 === 2){
-		click9 = 1;
-		console.log("Card 9 now equals " + click9);
-	}
-	if (click10 === 2){
-		click10 = 1;
-		console.log("Card 10 now equals " + click10);
-	}
-	if (click11 === 2){
-		click11 = 1;
-		console.log("Card 11 now equals " + click11);
-	}
-	if (click12 === 2){
-		click12 = 1;
-		console.log("Card 12 now equals " + click12);
-	}
-	if (click13 === 2){
-		click13 = 1;
-		console.log("Card 13 now equals " + click13);
-	}
-	if (click14 === 2){
-		click14 = 1;
-		console.log("Card 14 now equals " + click14);
-	}
-	if (click15 === 2){
-		click15 = 1;
-		console.log("Card 15 now equals " + click15);
-	}
-	if (click16 === 2){
-		click16 = 1;
-		console.log("Card 16 now equals " + click16);
-	}
-	if (click17 === 2){
-		click17 = 1;
-		console.log("Card 17 now equals " + click17);
-	}
-	if (click18 === 2){
-		click18 = 1;
-		console.log("Card 18 now equals " + click18);
-	}
-	if (click19 === 2){
-		click19 = 1;
-		console.log("Card 19 now equals " + click19);
-	}
-	if (click20 === 2){
-		click20 = 1;
-		console.log("Card 20 now equals " + click20);
+
+	for (var i = 0; i < 20; i++) {
+		if (clicks[i] === 2) {
+			clicks[i] = 1;
+			console.log("Card " + (i+1) + "now equals " + clicks[i])			
+		}
 	}
 }
 
 function theyMatch(){
 	console.log("theyMatch runs");
-	if (click1 === 2){
-		click1 = 3;
-		console.log("Card 1 now equals " + click1);
-	}
-	if (click2 === 2){
-		click2 = 3;
-		console.log("Card 2 now equals " + click2);
-	}
-	if (click3 === 2){
-		click3 = 3;
-		console.log("Card 3 now equals " + click3);
-	}
-	if (click4 === 2){
-		click4 = 3;
-		console.log("Card 4 now equals " + click4);
-	}
-	if (click5 === 2){
-		click5 = 3;
-		console.log("Card 5 now equals " + click5);
-	}
-	if (click6 === 2){
-		click6 = 3;
-		console.log("Card 6 now equals " + click6);
-	}
-	if (click7 === 2){
-		click7 = 3;
-		console.log("Card 7 now equals " + click7);
-	}
-	if (click8 === 2){
-		click8 = 3;
-		console.log("Card 8 now equals " + click8);
-	}
-	if (click9 === 2){
-		click9 = 3;
-		console.log("Card 9 now equals " + click9);
-	}
-	if (click10 === 2){
-		click10 = 3;
-		console.log("Card 10 now equals " + click10);
-	}
-	if (click11 === 2){
-		click11 = 3;
-		console.log("Card 11 now equals " + click11);
-	}
-	if (click12 === 2){
-		click12 = 3;
-		console.log("Card 12 now equals " + click12);
-	}
-	if (click13 === 2){
-		click13 = 3;
-		console.log("Card 13 now equals " + click13);
-	}
-	if (click14 === 2){
-		click14 = 3;
-		console.log("Card 14 now equals " + click14);
-	}
-	if (click15 === 2){
-		click15 = 3;
-		console.log("Card 15 now equals " + click15);
-	}
-	if (click16 === 2){
-		click16 = 3;
-		console.log("Card 16 now equals " + click16);
-	}
-	if (click17 === 2){
-		click17 = 3;
-		console.log("Card 17 now equals " + click17);
-	}
-	if (click18 === 2){
-		click18 = 3;
-		console.log("Card 18 now equals " + click18);
-	}
-	if (click19 === 2){
-		click19 = 3;
-		console.log("Card 19 now equals " + click19);
-	}
-	if (click20 === 2){
-		click20 = 3;
-		console.log("Card 20 now equals " + click20);
+	for (var i = 0; i < clicks.length; i++) {
+		if (clicks[i] === 2) {
+			clicks[i] = 3;
+			console.log('Card ' + (i+1) + ' now equals ' + clicks[i]);
+		}
 	}
 	//Replace puzzle card with solved image.
 	firstCardPosition.src = solved;
@@ -455,9 +184,13 @@ function theyMatch(){
 	winningMemory();
 }
 
+function checkEqual(elem){
+	return elem === 3
+}
+
 function winningMemory(){
 	console.log("Winning function runs.");
-	if (click1 === 3 && click2 === 3 && click3 === 3 && click4 === 3 && click5 === 3 && click6 === 3 && click7 === 3 && click8 === 3 && click9 === 3 && click10 === 3 && click11 === 3 && click12 === 3 && click13 === 3 && click14 === 3 && click15 === 3 && click16 === 3 && click17 === 3 && click18 === 3 && click19 === 3 && click20 === 3){
+	if (clicks.every(checkEqual)){
 		alert("You win!");
 	}
 }
@@ -571,24 +304,24 @@ function clickCard1() {
 	//Variable to link to the correct HTML elements.
 	var position1 = document.getElementById("card1");
 	//If the card has not been selected then it will be set to 1. If the card has been clicked on then it will be set to 2. If the card has been solved then it will be set to 3. The if statement prevents players from removing cards from the board by double clicking on them.
-	if (click1 === 1){
+	if (clicks[0] === 1){
 		console.log("Card 1 equals 1");
 		//Displays the image for this card.
-		position1.src = cardShuffle1;
+		position1.src = cardShuffles[0];
 		//Updates the card value to show that the image is visible.
-		click1 = 2;
+		clicks[0] = 2;
 		//Else if statement to update the matching variables.
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle1;
+			firstCard = cardShuffles[0];
 			firstCardPosition = position1;
 			console.log("first card updated");}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle1;
+			secondCard = cardShuffles[0];
 			secondCardPosition = position1;
 			console.log("second card updated");
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle1;
+			thirdCard = cardShuffles[0];
 			thirdCardPosition = position1;
 			console.log("third card updated");
 		}
@@ -602,19 +335,19 @@ function clickCard1() {
 function clickCard2() {
 	console.log("Card 2 clicked");
 	var position2 = document.getElementById("card2");
-	if (click2 === 1){
+	if (clicks[1] === 1){
 		console.log("Card 2 equals 1");
-		position2.src = cardShuffle2;
-		click2 = 2;
+		position2.src = cardShuffles[1];
+		clicks[1] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle2;
+			firstCard = cardShuffles[1];
 			firstCardPosition = position2;}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle2;
+			secondCard = cardShuffles[1];
 			secondCardPosition = position2;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle2;
+			thirdCard = cardShuffles[1];
 			thirdCardPosition = position2;
 		}
 		checkPair();}
@@ -623,19 +356,19 @@ function clickCard2() {
 function clickCard3() {
 	console.log("Card 3 clicked");
 	var position3 = document.getElementById("card3");
-	if (click3 === 1){
+	if (clicks[2] === 1){
 		console.log("Card 3 equals 1");
-		position3.src = cardShuffle3;
-		click3 = 2;
+		position3.src = cardShuffles[2];
+		clicks[2] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle3;
+			firstCard = cardShuffles[2];
 			firstCardPosition = position3;}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle3;
+			secondCard = cardShuffles[2];
 			secondCardPosition = position3;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle3;
+			thirdCard = cardShuffles[2];
 			thirdCardPosition = position3;
 		}
 		checkPair();}
@@ -644,19 +377,19 @@ function clickCard3() {
 function clickCard4() {
 	console.log("Card 4 clicked");
 	var position4 = document.getElementById("card4");
-	if (click4 === 1){
+	if (clicks[3] === 1){
 		console.log("Card 4 equals 1");
-		position4.src = cardShuffle4;
-		click4 = 2;
+		position4.src = cardShuffles[3];
+		clicks[3] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle4;
+			firstCard = cardShuffles[3];
 			firstCardPosition = position4;}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle4;
+			secondCard = cardShuffles[3];
 			secondCardPosition = position4;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle4;
+			thirdCard = cardShuffles[3];
 			thirdCardPosition = position4;
 		}
 		checkPair();}
@@ -665,20 +398,20 @@ function clickCard4() {
 function clickCard5() {
 	console.log("Card 5 clicked");
 	var position5 = document.getElementById("card5");
-	if (click5 === 1){
+	if (clicks[4] === 1){
 		console.log("Card 5 equals 1");
-		position5.src = cardShuffle5;
-		click5 = 2;
+		position5.src = cardShuffles[4];
+		clicks[4] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle5;
+			firstCard = cardShuffles[4];
 			firstCardPosition = position5;
 			console.log(firstCardPosition);}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle5;
+			secondCard = cardShuffles[4];
 			secondCardPosition = position5;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle5;
+			thirdCard = cardShuffles[4];
 			thirdCardPosition = position5;
 		}
 		checkPair();}
@@ -687,20 +420,20 @@ function clickCard5() {
 function clickCard6() {
 	console.log("Card 6 clicked");
 	var position6 = document.getElementById("card6");
-	if (click6 === 1){
+	if (clicks[5] === 1){
 		console.log("Card 6 equals 1");
-		position6.src = cardShuffle6;
-		click6 = 2;
+		position6.src = cardShuffles[5];
+		clicks[5] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle6;
+			firstCard = cardShuffles[5];
 			firstCardPosition = position6;
 			console.log(firstCardPosition);}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle6;
+			secondCard = cardShuffles[5];
 			secondCardPosition = position6;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle6;
+			thirdCard = cardShuffles[5];
 			thirdCardPosition = position6;
 		}
 		checkPair();}
@@ -709,20 +442,20 @@ function clickCard6() {
 function clickCard7() {
 	console.log("Card 7 clicked");
 	var position7 = document.getElementById("card7");
-	if (click7 === 1){
+	if (clicks[6] === 1){
 		console.log("Card 7 equals 1");
-		position7.src = cardShuffle7;
-		click7 = 2;
+		position7.src = cardShuffles[6];
+		clicks[6] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle7;
+			firstCard = cardShuffles[6];
 			firstCardPosition = position7;
 			console.log(firstCardPosition);}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle7;
+			secondCard = cardShuffles[6];
 			secondCardPosition = position7;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle7;
+			thirdCard = cardShuffles[6];
 			thirdCardPosition = position7;
 		}
 		checkPair();}
@@ -731,20 +464,20 @@ function clickCard7() {
 function clickCard8() {
 	console.log("Card 8 clicked");
 	var position8 = document.getElementById("card8");
-	if (click8 === 1){
+	if (clicks[7] === 1){
 		console.log("Card 8 equals 1");
-		position8.src = cardShuffle8;
-		click8 = 2;
+		position8.src = cardShuffles[7];
+		clicks[7] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle8;
+			firstCard = cardShuffles[7];
 			firstCardPosition = position8;
 			console.log(firstCardPosition);}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle8;
+			secondCard = cardShuffles[7];
 			secondCardPosition = position8;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle8;
+			thirdCard = cardShuffles[7];
 			thirdCardPosition = position8;
 		}
 		checkPair();}
@@ -753,20 +486,20 @@ function clickCard8() {
 function clickCard9() {
 	console.log("Card 9 clicked");
 	var position9 = document.getElementById("card9");
-	if (click9 === 1){
+	if (clicks[8] === 1){
 		console.log("Card 9 equals 1");
-		position9.src = cardShuffle9;
-		click9 = 2;
+		position9.src = cardShuffles[8];
+		clicks[8] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle9;
+			firstCard = cardShuffles[8];
 			firstCardPosition = position9;
 			console.log(firstCardPosition);}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle9;
+			secondCard = cardShuffles[8];
 			secondCardPosition = position9;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle9;
+			thirdCard = cardShuffles[8];
 			thirdCardPosition = position9;
 		}
 		checkPair();}
@@ -775,19 +508,19 @@ function clickCard9() {
 function clickCard10() {
 	console.log("Card 10 clicked");
 	var position10 = document.getElementById("card10");
-	if (click10 === 1){
+	if (clicks[9] === 1){
 		console.log("Card 10 equals 1");
-		position10.src = cardShuffle10;
-		click10 = 2;
+		position10.src = cardShuffles[9];
+		clicks[9] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle10;
+			firstCard = cardShuffles[9];
 			firstCardPosition = position10;}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle10;
+			secondCard = cardShuffles[9];
 			secondCardPosition = position10;
 			}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle10;
+			thirdCard = cardShuffles[9];
 			thirdCardPosition = position10;
 		}
 		checkPair();}
@@ -795,19 +528,19 @@ function clickCard10() {
 
 function clickCard11() {
 	var position11 = document.getElementById("card11");
-	if (click11 === 1){
-		position11.src = cardShuffle11;
-		click11 = 2;
+	if (clicks[10] === 1){
+		position11.src = cardShuffles[10];
+		clicks[10] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle11;
+			firstCard = cardShuffles[10];
 			firstCardPosition = position11;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle11;
+			secondCard = cardShuffles[10];
 			secondCardPosition = position11;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle11;
+			thirdCard = cardShuffles[10];
 			thirdCardPosition = position11;
 		}
 		checkPair();
@@ -816,19 +549,19 @@ function clickCard11() {
 
 function clickCard12() {
 	var position12 = document.getElementById("card12");
-	if (click12 === 1){
-		position12.src = cardShuffle12;
-		click12 = 2;
+	if (clicks[11] === 1){
+		position12.src = cardShuffles[11];
+		clicks[11] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle12;
+			firstCard = cardShuffles[11];
 			firstCardPosition = position12;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle12;
+			secondCard = cardShuffles[11];
 			secondCardPosition = position12;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle12;
+			thirdCard = cardShuffles[11];
 			thirdCardPosition = position12;
 		}
 		checkPair();
@@ -837,19 +570,19 @@ function clickCard12() {
 
 function clickCard13() {
 	var position13 = document.getElementById("card13");
-	if (click13 === 1){
-		position13.src = cardShuffle13;
-		click13 = 2;
+	if (clicks[12] === 1){
+		position13.src = cardShuffles[12];
+		clicks[12] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle13;
+			firstCard = cardShuffles[12];
 			firstCardPosition = position13;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle13;
+			secondCard = cardShuffles[12];
 			secondCardPosition = position13;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle13;
+			thirdCard = cardShuffles[12];
 			thirdCardPosition = position13;
 		}
 		checkPair();
@@ -858,19 +591,19 @@ function clickCard13() {
 
 function clickCard14() {
 	var position14 = document.getElementById("card14");
-	if (click14 === 1){
-		position14.src = cardShuffle14;
-		click14 = 2;
+	if (clicks[13] === 1){
+		position14.src = cardShuffles[13];
+		clicks[13] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle14;
+			firstCard = cardShuffles[13];
 			firstCardPosition = position14;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle14;
+			secondCard = cardShuffles[13];
 			secondCardPosition = position14;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle14;
+			thirdCard = cardShuffles[13];
 			thirdCardPosition = position14;
 		}
 		checkPair();
@@ -879,19 +612,19 @@ function clickCard14() {
 
 function clickCard15() {
 	var position15 = document.getElementById("card15");
-	if (click15 === 1){
-		position15.src = cardShuffle15;
-		click15 = 2;
+	if (clicks[14] === 1){
+		position15.src = cardShuffles[14];
+		clicks[14] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle15;
+			firstCard = cardShuffles[14];
 			firstCardPosition = position15;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle15;
+			secondCard = cardShuffles[14];
 			secondCardPosition = position15;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle15;
+			thirdCard = cardShuffles[14];
 			thirdCardPosition = position15;
 		}
 		checkPair();
@@ -900,19 +633,19 @@ function clickCard15() {
 
 function clickCard16() {
 	var position16 = document.getElementById("card16");
-	if (click16 === 1){
-		position16.src = cardShuffle16;
-		click16 = 2;
+	if (clicks[15] === 1){
+		position16.src = cardShuffles[15];
+		clicks[15] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle16;
+			firstCard = cardShuffles[15];
 			firstCardPosition = position16;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle16;
+			secondCard = cardShuffles[15];
 			secondCardPosition = position16;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle16;
+			thirdCard = cardShuffles[15];
 			thirdCardPosition = position16;
 		}
 		checkPair();
@@ -921,19 +654,19 @@ function clickCard16() {
 
 function clickCard17() {
 	var position17 = document.getElementById("card17");
-	if (click17 === 1){
-		position17.src = cardShuffle17;
-		click17 = 2;
+	if (clicks[16] === 1){
+		position17.src = cardShuffles[16];
+		clicks[16] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle17;
+			firstCard = cardShuffles[16];
 			firstCardPosition = position17;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle17;
+			secondCard = cardShuffles[16];
 			secondCardPosition = position17;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle17;
+			thirdCard = cardShuffles[16];
 			thirdCardPosition = position17;
 		}
 		checkPair();
@@ -942,19 +675,19 @@ function clickCard17() {
 
 function clickCard18() {
 	var position18 = document.getElementById("card18");
-	if (click18 === 1){
-		position18.src = cardShuffle18;
-		click18 = 2;
+	if (clicks[17] === 1){
+		position18.src = cardShuffles[17];
+		clicks[17] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle18;
+			firstCard = cardShuffles[17];
 			firstCardPosition = position18;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle18;
+			secondCard = cardShuffles[17];
 			secondCardPosition = position18;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle18;
+			thirdCard = cardShuffles[17];
 			thirdCardPosition = position18;
 		}
 		checkPair();
@@ -963,19 +696,19 @@ function clickCard18() {
 
 function clickCard19() {
 	var position19 = document.getElementById("card19");
-	if (click19 === 1){
-		position19.src = cardShuffle19;
-		click19 = 2;
+	if (clicks[18] === 1){
+		position19.src = cardShuffles[18];
+		clicks[18] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle19;
+			firstCard = cardShuffles[18];
 			firstCardPosition = position19;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle19;
+			secondCard = cardShuffles[18];
 			secondCardPosition = position19;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle19;
+			thirdCard = cardShuffles[18];
 			thirdCardPosition = position19;
 		}
 		checkPair();
@@ -984,19 +717,19 @@ function clickCard19() {
 
 function clickCard20() {
 	var position20 = document.getElementById("card20");
-	if (click20 === 1){
-		position20.src = cardShuffle20;
-		click20 = 2;
+	if (clicks[19] === 1){
+		position20.src = cardShuffles[19];
+		clicks[19] = 2;
 		if (firstCard === "unclicked"){
-			firstCard = cardShuffle20;
+			firstCard = cardShuffles[19];
 			firstCardPosition = position20;
 		}
 		else if (secondCard === "unclicked"){
-			secondCard = cardShuffle20;
+			secondCard = cardShuffles[19];
 			secondCardPosition = position20;
 		}
 		else if (thirdCard === "unclicked"){
-			thirdCard = cardShuffle20;
+			thirdCard = cardShuffles[19];
 			thirdCardPosition = position20;
 		}
 		checkPair();
